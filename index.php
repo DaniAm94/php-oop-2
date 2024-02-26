@@ -19,7 +19,7 @@ require __DIR__.'/data/data.php';
         <ul class="row row-cols-4 row-gap-4 list-unstyled">
         <?php foreach($products as $product):?>
             <li>
-                <div class="card text-center " style="min-height: 610px">
+                <div class="card text-center " style="min-height: 590px">
                     <img src="<?= $product->img ?>" class="card-img-top" alt="<?= $product->label ?>">
                     <div class="card-body d-flex flex-column justify-content-between ">
                         <h5 class="card-title mb-4"><?= $product->label ?></h5>
@@ -27,12 +27,12 @@ require __DIR__.'/data/data.php';
                             <i class="card-text me-3"><?= $product->category->label ?></i>
                             <img style="height: 30px" src="http://localhost/boolean/php-oop-2/data/icons/<?= $product->category->icon ?>" alt="Icona <?= $product->category->label ?>">
                         </div>
-                        <p class="mt-3">
-                            <strong>Codice prodotto: </strong>
-                            <em><?= $product->getId() ?></em>
-                        </p>
                     </div>
                     <ul class="list-group list-group-flush fw-bold ">
+                        <li class="list-group-item">
+                        <span>Codice prodotto: </span>
+                        <em><?= $product->getId() ?></em>
+                        </li>
                         <li class="list-group-item"><?= $product->price ?></li>
                         <li class="list-group-item"><?= $product->type ?></li>
                     </ul>
