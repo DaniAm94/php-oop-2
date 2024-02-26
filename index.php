@@ -25,7 +25,7 @@ require __DIR__.'/data/data.php';
                         <h5 class="card-title mb-4"><?= $product->label ?></h5>
                         <div class="category d-flex justify-content-center">
                             <i class="card-text me-3"><?= $product->category->label ?></i>
-                            <img style="height: 30px" src="http://localhost/boolean/php-oop-2/data/icons/<?= $product->category->icon ?>" alt="Icona <?= $product->category->label ?>">
+                            <img style="height: 30px" src="http://localhost/boolean/php-oop-2/data/icons/<?= $product->category->getIcon() ?>" alt="Icona <?= $product->category->label ?>">
                         </div>
                     </div>
                     <ul class="list-group list-group-flush fw-bold ">
